@@ -23,13 +23,13 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div>
-        Latitude: {this.state.lat}
-        <br />
-        Error: {this.state.errorMessage}
-      </div>
-    );
+    if (this.state.errorMessage && !this.state.lat) {
+      return <div>error: {this.state.errorMessage}</div>;
+    }
+    if (!this.state.errorMessage && this.state.lat) {
+      return <div>Latitude: {this.state.lat}</div>;
+    }
+    return <div>Loading!</div>
   }
 }
 
