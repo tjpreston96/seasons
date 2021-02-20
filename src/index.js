@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import SeasonDisplay from "./components/SeasonDisplay/SeasonDisplay";
 import "semantic-ui-css/semantic.min.css";
+import Spinner from "./components/Spinner/Spinner";
 
 
 // class App extends React.Component
@@ -24,7 +25,7 @@ class App extends Component {
     if (!this.state.errorMessage && this.state.lat) {
       return <SeasonDisplay lat={this.state.lat} />;
     }
-    return <div>Loading!</div>;
+    return <Spinner/>
   }
 }
 
