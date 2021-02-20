@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import SeasonDisplay from "./components/SeasonDisplay";
+import SeasonDisplay from "./components/SeasonDisplay/SeasonDisplay";
 import "semantic-ui-css/semantic.min.css";
 
 
